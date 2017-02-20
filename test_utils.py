@@ -7,18 +7,16 @@ import utils
 
 class TestUtils(unittest.TestCase):
     def test_fact(self):
-        self.assertEqual(utils.fact(0),0)
+        self.assertEqual(utils.fact(5),120)
         self.assertEqual(utils.fact(3),6)
         pass
     
     def test_roots(self):
-        self.assertEqual(utils.roots(2,1,3),())
+        self.assertNotEquals(utils.roots(4,4,1),-0.5)
         pass
-    
     def test_integrate(self):
-        self.assertEqual(utils.integrate(1,0,150),150)
+        self.assertEquals(utils.integrate('x ** 2 - 1', -1,1),-1.3333)
         pass
-
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)
     runner = unittest.TextTestRunner()

@@ -19,16 +19,12 @@ def roots(a, b, c):
                 y = (-b) / (2 * a)
                 print('the roots are :', x, ',', y)
 
-            elif r >  0:
-                x = ((-b) + sq(r)) / (2 * a)
+                x= ((-b) + sq(r)) / (2 * a)
                 y = ((-b) - sq(r)) / (2 * a)
                 print('the roots are :', x, ',', y)
 
-            if r < -1:
-                i = sq(-1)
-                x = (-b + (sq(r * (i ** 2)))) / (2 * a)
-                y = (-b - (sq(r * (i ** 2)))) / (2 * a)
-                print( 'the roots are :', x, ',', y)
+            else:
+                print( 'delta inferieur à zero ')
         except:
             print
             'wrong inputs , please enter numbers only'
@@ -43,5 +39,5 @@ def integrate(function, lower, upper):
     return(sum)
 if __name__ == '__main__':
     print(fact(5))
-    print(roots(3, 2, 1))
+    print(roots(4, 4, 1))
     print(integrate('x ** 2 - 1', -1, 1))
